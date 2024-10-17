@@ -1,22 +1,18 @@
 public class Author {
     private final String FirstName;
-    private final String MiddleName;
-    private final String LastName;
+    private final String SurName;
 
-    public Author(String FirstName, String MiddleName, String LastName) {
+    public Author(String FirstName, String SurName) {
         this.FirstName = FirstName;
-        this.MiddleName = MiddleName;
-        this.LastName = LastName;
+        this.SurName = SurName;
     }
-
     public String getFirstName() {
         return FirstName;
     }
-    public String getMiddleName() {
-        return MiddleName;
+    public String getSurName() {
+        return SurName;
     }
-
-    public String getLastName() {
-        return LastName;
+    public String toString() {
+        return FirstName + " " + SurName;
     }
 }
