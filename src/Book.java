@@ -21,4 +21,16 @@ public class Book {
     public void setPublicBook(int publicBook) {
         this.publicBook = publicBook;
     }
+    @Override
+    public boolean equals(Object other) {
+        if (this.getClass() != other.getClass()) {
+            return false;
+        }
+        Book book = (Book) other;
+        return nameBook.equals(book.nameBook);
+    }
+    @Override
+    public int hashCode() {
+        return java.util.Objects.hash(nameBook);
+    }
 }
