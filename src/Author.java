@@ -1,23 +1,23 @@
 public class Author {
-    private final String FirstName;
-    private final String SurName;
+    private final String nameFirst;
+    private final String nameSecond;
 
     public Author(String FirstName, String SurName) {
-        this.FirstName = FirstName;
-        this.SurName = SurName;
+        this.nameFirst = FirstName;
+        this.nameSecond = SurName;
     }
 
-    public String getFirstName() {
-        return FirstName;
+    public String getNameFirst() {
+        return nameFirst;
     }
 
-    public String getSurName() {
-        return SurName;
+    public String getNameSecond() {
+        return nameSecond;
     }
 
     @Override
     public String toString() {
-        return FirstName + " " + SurName;
+        return nameFirst + " " + nameSecond;
     }
 
     @Override
@@ -26,12 +26,14 @@ public class Author {
             return false;
         }
         Author author = (Author) other;
-        return FirstName.equals(author.FirstName);
+        boolean isnameFirst = nameFirst.equals(author.nameFirst);
+        boolean isnameSecond = nameSecond.equals(author.nameSecond);
+        return isnameFirst && isnameSecond;
     }
 
     @Override
     public int hashCode() {
-        return java.util.Objects.hash(FirstName);
+        return java.util.Objects.hash(nameFirst, nameSecond);
     }
 
 }

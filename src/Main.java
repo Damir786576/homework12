@@ -17,10 +17,10 @@ public class Main {
         bookLermontov.setPublicBook(1839);
         System.out.println("PublicBook = " + bookLermontov.getPublicBook());
         System.out.println();
-        System.out.println("FirstName = " + Pushkin.getFirstName());
-        System.out.println("MiddleName = " + Pushkin.getSurName());
+        System.out.println("FirstName = " + Pushkin.getNameFirst());
+        System.out.println("MiddleName = " + Pushkin.getNameSecond());
         System.out.println();
-        System.out.println("FirstName = " + Lermontov.getFirstName());
-        System.out.println("MiddleName = " + Lermontov.getSurName());
+        System.out.println("FirstName = " + Lermontov.getNameFirst());
+        System.out.println("MiddleName = " + Lermontov.getNameSecond());
     }
 }

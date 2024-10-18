@@ -27,10 +27,17 @@ public class Book {
             return false;
         }
         Book book = (Book) other;
-        return nameBook.equals(book.nameBook);
+        boolean isnameBook = nameBook.equals(book.nameBook);
+        boolean isnameAuthor = nameAuthor.equals(book.nameAuthor);
+        boolean ispublicBook = publicBook == book.publicBook;
+        return ispublicBook && isnameBook && isnameAuthor;
     }
     @Override
     public int hashCode() {
-        return java.util.Objects.hash(nameBook);
+        return java.util.Objects.hash(nameBook, nameAuthor, publicBook);
+    }
+    @Override
+    public String toString() {
+        return nameBook + " " + nameAuthor + " " + publicBook;
     }
 }
